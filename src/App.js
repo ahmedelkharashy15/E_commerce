@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
-import PageNotFound from "./pages/PageNotFound";
+import PageNotFound from "./pages/PageNotFound"; 
 
 function App() {
   return (
