@@ -1,11 +1,19 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function Navbar() {
-  return (
+  
+    const cartProducts = useSelector((state) => state)
+    let n = 0
+    cartProducts.map((item)=>{
+        return n += item.count
+    })
+
+    return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
-            <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light p-4">
+            <div class="container">
                 <NavLink className="navbar-brand" to="/">E-commerce</NavLink>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,7 +36,7 @@ export default function Navbar() {
                 <form class="d-flex">
                     <NavLink className="btn btn-outline-dark mx-2" to="/login"><i class="fas fa-sign-in-alt"></i> Login</NavLink>
                     <NavLink className="btn btn-outline-dark mx-2" to="/register"><i class="fas fa-user-plus"></i> Register</NavLink>
-                    <NavLink className="btn btn-outline-dark mx-2" to="/cart"><i class="fas fa-shopping-cart"></i> Cart</NavLink>
+                    <NavLink className="btn btn-outline-dark mx-2" to="/cart"><i class="fas fa-shopping-cart"></i> Cart({n})</NavLink>
                 </form>
                 </div>
             </div>

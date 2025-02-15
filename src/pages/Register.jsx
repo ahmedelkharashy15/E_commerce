@@ -8,11 +8,11 @@ export default function Register() {
     <div>
             <Navbar/>
 
-            <div className="container">
-                <h5 className="fs-1 text-center my-5">Register</h5>
+            <div className="container pt-5">
+                <h5 className="fs-1 text-center my-5 pt-4">Register</h5>
                 <hr />
 
-                <form className='pt-4 pb-5 mb-5 w-25 mx-auto'>
+                <form className='pt-4 pb-5 mb-5 mx-auto' style={{width:'350px'}}>
                     <div class="mb-3 ">
                         <label for="exampleInputName" class="form-label">Full Name</label>
                         <input type="name" class="form-control" placeholder="Enter your name" id="exampleInputName"/>

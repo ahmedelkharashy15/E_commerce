@@ -8,11 +8,11 @@ export default function Login() {
     <div>
         <Navbar/>
 
-        <div className="container">
-            <h5 className="fs-1 text-center my-5">Login</h5>
+        <div className="container pt-5">
+            <h5 className="fs-1 text-center my-5 pt-4">Login</h5>
             <hr />
 
-            <form className='pt-4 pb-5 mb-5 w-25 mx-auto'>
+            <form className='pt-4 pb-5 mb-5 mx-auto' style={{width:'350px'}}>
                 <div class="mb-3 ">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" placeholder="Enter your email" id="exampleInputEmail1" aria-describedby="emailHelp"/>
